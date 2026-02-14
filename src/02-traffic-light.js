@@ -1,4 +1,4 @@
-/**
+6; /**
  * 🚦 The Driving Simulator
  *
  * SafeDrive Driving School is building a simulator for new students.
@@ -23,4 +23,26 @@
  */
 export function getTrafficAction(color) {
   // Your code here
+
+  let signal = color.toLowerCase();
+  switch (signal) {
+    case "green":
+      return "GO";
+      break;
+
+    case "yellow":
+      return "SLOW DOWN";
+      break;
+
+    case "red":
+      return "STOP";
+      break;
+
+    case "flashing red":
+      return "STOP AND PROCEED WITH CAUTION";
+      break;
+
+    default:
+      return "INVALID SIGNAL";
+  }
 }
